@@ -1,11 +1,22 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="danger">
     <ion-title>
-      About
+      ผลการเรียน
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+  <ion-card *ngFor="let gd of grades">
+    <img src="../../assets/imgs/{{ gd.photo }}" />
+    <ion-card-content>
+      <ion-card-title>
+        {{ gd.idstd }}
+      </ion-card-title>
+      <p>{{ gd.fullname }}</p>
+      <p>{{ gd.depname }}</p>
+      <p>{{ gd.grade }}</p>
+      <p>{{ gd.advisor }}</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
